@@ -2,7 +2,7 @@
 $location = "localhost";
 $name = "root";
 $pass = "";
-$database = "grupab";
+$database = "zavrsni";
 
 $con = new mysqli($location, $name, $pass, $database);
 
