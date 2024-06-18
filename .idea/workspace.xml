@@ -7,7 +7,7 @@
     <list default="true" id="04776870-beb2-44e6-8149-6b214d884a2f" name="Changes" comment="Basic fajlovi">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/cart.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/data.php" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/data.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/app.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,21 +39,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/xampp/htdocs/WebProjekat",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/Zavrsni&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -83,7 +83,11 @@
       <workItem from="1718265256333" duration="5810000" />
       <workItem from="1718272109827" duration="3323000" />
       <workItem from="1718558192916" duration="1669000" />
-      <workItem from="1718658215336" duration="12058000" />
+      <workItem from="1718658215336" duration="12169000" />
+      <workItem from="1718670572076" duration="5000" />
+      <workItem from="1718671404833" duration="35000" />
+      <workItem from="1718702240545" duration="6271000" />
+      <workItem from="1718709188976" duration="471000" />
     </task>
     <task id="LOCAL-00001" summary="Basic fajlovi">
       <option name="closed" value="true" />

@@ -86,10 +86,30 @@ function addItem() {
 
 function addToCart() {
     let request = {
-        url: "AddToCart.php",
+        url: "addToCart.php",
         method: 'post',
         data: {
             itemId: $('#itemId').val(),
+
+        },
+        success: function (result) {
+            alert(result);
+
+        },
+        error: function (xhr, status, error) {
+            alert("Error deleting movie: " + error);
+        },
+    }
+
+    $.ajax(request);
+}
+
+function removeFromCart() {
+    let request = {
+        url: "removeFromCart.php",
+        method: 'post',
+        data: {
+            artikalId: $('#artikalId').val(),
 
         },
         success: function (result) {
