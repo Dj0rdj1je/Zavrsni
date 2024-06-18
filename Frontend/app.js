@@ -89,10 +89,8 @@ function addToCart() {
         url: "AddToCart.php",
         method: 'post',
         data: {
-            model: $('#model').val(),
-            price: $('#price').val(),
-            quantity: $('#quantity').val(),
-            categoryId: $('#categoryId').val()
+            itemId: $('#itemId').val(),
+
         },
         success: function (result) {
             alert(result);

@@ -21,7 +21,7 @@ if (isset($_GET['search_phrase'])) {
                 Model: " . htmlspecialchars($row['model']) . "<br>
                 Cijena: " . htmlspecialchars($row['price']) . "<br>
                 Kolicina: " . htmlspecialchars($row['quantity']) . "<br>
-                <button value='". $row['id'] ."' id='item' onclick=''>Dodaj</button>
+                <button value='". $row['id'] ."' id='itemId' onclick='addToCart()'>Dodaj</button>
         </li>";
         }
     }else {
