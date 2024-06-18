@@ -1,6 +1,7 @@
 <?php
 session_start();
 include 'connection.php';
+$url = "user.php?id=". $_SESSION['id'];
 ?>
 <!doctype html>
 <html lang="en">
@@ -10,39 +11,33 @@ include 'connection.php';
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="../Frontend/slideshow.css">
     <title>Document</title>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        <a class="navbar-brand" href="index.php">Navbar</a>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <?php if ($_SESSION['username'] == 'admin'){
+                        echo "<a class='nav-link active' aria-current='page' href='item.php'>Dodaj artikal</a>";
+                    }?>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="<?php echo$url ?>"><?php echo $_SESSION['username']?></a>
                 </li>
-
                 <li class="nav-item">
-                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                    <a class="nav-link" href="cart.php">Cart</a>
                 </li>
             </ul>
-            <a href="add.php">Dodaj artikal</a>
-            <a href="user.php?id=<?php echo $_SESSION['id']; ?>">User</a>
             <form class="d-flex" role="search">
                 <input class="form-control me-2" id="search" name="search" onkeyup="find()">
                 <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
-
         </div>
     </div>
-
 </nav>
 <ul id="lista">
 

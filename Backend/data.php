@@ -1,11 +1,11 @@
 <?php
+session_start();
 include "connection.php";
-
 
 if (isset($_GET['search_phrase'])) {
     $search = $_GET['search_phrase']."%";
 
-    $sql = "SELECT * FROM shop WHERE model LIKE ?";
+    $sql = "SELECT * FROM products WHERE model LIKE ?";
 
     $stmt = $con->prepare($sql);
     $stmt->bind_param('s', $search);
@@ -13,12 +13,15 @@ if (isset($_GET['search_phrase'])) {
     $stmt->execute();
     $results = $stmt->get_result();
     if ($results->num_rows > 0){
+
         while ($row = $results->fetch_assoc()) {
+
             echo "<li>
                
                 Model: " . htmlspecialchars($row['model']) . "<br>
                 Cijena: " . htmlspecialchars($row['price']) . "<br>
                 Kolicina: " . htmlspecialchars($row['quantity']) . "<br>
+                <button value='". $row['id'] ."' id='item' onclick=''>Dodaj</button>
         </li>";
         }
     }else {
@@ -30,8 +33,8 @@ if (isset($_GET['search_phrase'])) {
 if (isset($_GET['category'])){
     $category = $_GET['category'];
 
-    $sql = "SELECT * FROM shop s JOIN category c
-            ON s.category_id = c.id WHERE c.name LIKE ?";
+    $sql = "SELECT * FROM products p JOIN category c
+            ON p.category_id = c.id WHERE c.name LIKE ?";
 
     $stmt = $con->prepare($sql);
     $stmt->bind_param('s', $category);
