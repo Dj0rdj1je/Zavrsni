@@ -32,10 +32,10 @@ $url = "user.php?id=". $_SESSION['id'];
                     <a class="nav-link" href="cart.php">Cart</a>
                 </li>
             </ul>
-            <form class="d-flex" role="search">
+
                 <input class="form-control me-2" id="search" name="search" onkeyup="find()">
                 <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+
         </div>
     </div>
 </nav>
@@ -67,6 +67,7 @@ $url = "user.php?id=". $_SESSION['id'];
 
 <div id="table"></div>
 <script src="../Frontend/app.js"></script>
+<script src="../Frontend/add.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </body>
 </html>

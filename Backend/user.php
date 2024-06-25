@@ -55,13 +55,13 @@ if ($id == $_SESSION['id']) {
 <!--        </div>-->
 <!--    </div>-->
 <!--</nav>-->
-<form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
+
     <input type="hidden" value="<?php echo $user['id']?>" id="id">
     <input type='text' value='<?php echo $user['username']?>' id='username'/>
     <input type='email' value='<?php echo $user['email']?>' id='email' />
     <input type='text' value='<?php echo $user['password']?>' id='password' />
     <button  onclick="edit()">Sacuvaj</button>
-</form>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script src="../Frontend/app.js"></script>
 </body>

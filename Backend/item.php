@@ -36,7 +36,7 @@ session_start();
         </div>
     </div>
 </nav>
-<form action="" method="post">
+
     <span>Model</span>
     <input type="text" id="model" >
     <br>
@@ -60,7 +60,7 @@ session_start();
     </select>
     <input type="submit" value="Add" id="submit" onclick="addItem()">
 
-</form>
+
 <script src="../Frontend/app.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </body>

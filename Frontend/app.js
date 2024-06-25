@@ -84,32 +84,31 @@ function addItem() {
     $.ajax(request);
 }
 
-function addToCart() {
+function addProductToCart() {
     let request = {
-        url: "addToCart.php",
+        url: "addProductToCart.php",
         method: 'post',
         data: {
-            itemId: $('#itemId').val(),
+            productId: $('#productId').val()
 
         },
         success: function (result) {
-            alert(result);
+            $('#greksa').html(result);
 
         },
         error: function (xhr, status, error) {
-            alert("Error deleting movie: " + error);
+            $('#greksa').html(error);
         },
     }
 
     $.ajax(request);
 }
-
-function removeFromCart() {
+function removeProduct(removeId) {
     let request = {
         url: "removeFromCart.php",
         method: 'post',
         data: {
-            artikalId: $('#artikalId').val(),
+            removeId: removeId
 
         },
         success: function (result) {
@@ -117,7 +116,7 @@ function removeFromCart() {
 
         },
         error: function (xhr, status, error) {
-            alert("Error deleting movie: " + error);
+            alert(error);
         },
     }
 
