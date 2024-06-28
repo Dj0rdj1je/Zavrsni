@@ -1,4 +1,3 @@
-
 function find(){
 
     let request = {
@@ -38,6 +37,25 @@ function choose(){
     $.ajax(request);
 
 }
+
+function getCartData(){
+
+    let request = {
+        url: "cartData.php",
+        method: 'get',
+        success: function (result) {
+            $('#data').html(result);
+        },
+        error: function (xhr, status, error) {
+            $('#data').html(error);
+        },
+    }
+
+    $.ajax(request);
+
+}
+
+
 
 function edit(){
 
@@ -84,35 +102,56 @@ function addItem() {
     $.ajax(request);
 }
 
-function addProductToCart() {
+function addProductToCart(productId) {
     let request = {
         url: "addProductToCart.php",
         method: 'post',
         data: {
-            productId: $('#productId').val()
+            productId: productId
 
         },
         success: function (result) {
-            $('#greksa').html(result);
+            alert("Uspjeno ste dodali proizvod u korpu!" + result)
 
         },
         error: function (xhr, status, error) {
-            $('#greksa').html(error);
+            alert(error)
         },
     }
 
     $.ajax(request);
 }
-function removeProduct(removeId) {
+function removeProduct(removeId, productId) {
     let request = {
         url: "removeFromCart.php",
         method: 'post',
         data: {
-            removeId: removeId
+            removeId: removeId,
+            productId: productId
 
         },
         success: function (result) {
-            alert(result);
+            alert("Uspjeno ste obrisali proizvod iz korpe!" + result)
+            getCartData();
+        },
+        error: function (xhr, status, error) {
+            alert(error);
+        },
+    }
+
+    $.ajax(request);
+}
+
+
+function buyProduct(sum){
+    let request = {
+        url: "export.php",
+        method: 'post',
+        data: {
+            sum: sum
+        },
+        success: function (result) {
+            $('#err').html( "Uspjeno ste obavili kupovinu!" + result)
 
         },
         error: function (xhr, status, error) {

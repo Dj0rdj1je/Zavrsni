@@ -1,17 +1,3 @@
-<?php
-
-session_start();
-include 'connection.php';
-$userId = $_SESSION['id'];
-$query = "SELECT c.id, p.model, p.price, p.quantity  FROM products p JOIN cart c ON p.id = c.product_id WHERE c.user_id = ?";
-$stmt = $con->prepare($query);
-$stmt->bind_param('i', $userId);
-$stmt->execute();
-$result = $stmt->get_result();
-
-
-?>
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -19,35 +5,25 @@ $result = $stmt->get_result();
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>Document</title>
-</head>
-<body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-<form>
-<table>
-    <tr><td>Model</td><td>Price</td></tr>
     <?php
-    $sum = 0;
-    if ($result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()) {
-            $id = $row['id'];
-            $model = $row["model"];
-            $price = $row["price"];
-            $sum += $row['price'];
-            echo '<tr><td>'.$model.'</td><td>'.$price.'</td><td><input type="button" onclick="removeProduct('.$id.')" value="Delete"></td></tr>';
-        }
+    session_start();
+    if (!isset($_SESSION['username'])) {
+        header('location:login.php');
     }
-    echo "<tr><td>Price</td><td id='price'>" . $sum . "</td></tr>";
+    include 'navbar.php';
     ?>
 
-</table>
-</form>
-<div id="err"></div>
-<button>Buy</button>
-<script src="../Frontend/app.js"></script>
+</head>
+<body onload="getCartData()">
 
+<div id="data" >
+
+</div>
+
+<div id="err"></div>
+<script src="../Frontend/app.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </body>
 </html>
-
-
-

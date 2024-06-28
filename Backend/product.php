@@ -1,5 +1,6 @@
 <?php
 include "connection.php";
+
 $id = $_GET['id'];
 
 $query = "SELECT * FROM products WHERE id = ?";
@@ -31,7 +32,7 @@ while ($row = $result->fetch_assoc()) {
     <h2><?php echo $price?></h2>
     <h3><?php echo $quantity?></h3>
     <h4><?php echo $id?></h4>
-    <button id="productId" value="<?php echo $id?>" onclick="addProductToCart()">Buy</button>
+    <button onclick="addProductToCart(<?php echo $id?>)">Buy</button>
 </div>
 <div id="greksa">
 

@@ -5,17 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="04776870-beb2-44e6-8149-6b214d884a2f" name="Changes" comment="Basic fajlovi">
-      <change afterPath="$PROJECT_DIR$/Backend/product.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/removeFromCart.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/cartData.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/export.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/logout.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/AddToCart.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/add.php" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/add.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/addProductToCart.php" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/addProductToCart.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/cart.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/data.php" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/data.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/editUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/editUser.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/item.php" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/item.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/addProductToCart.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/item.php" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Item.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/product.php" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/removeFromCart.php" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/removeFromCart.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/user.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/add.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/validation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,21 +57,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/Dell/Desktop/Laravel",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Node.js.app.js.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/Zavrsni&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunManager">
+    <configuration name="app.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/Frontend/app.js" working-dir="$PROJECT_DIR$/Frontend">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.app.js" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -103,6 +122,19 @@
       <workItem from="1719146043851" duration="7724000" />
       <workItem from="1719176696139" duration="3561000" />
       <workItem from="1719216523252" duration="27000" />
+      <workItem from="1719306783609" duration="2143000" />
+      <workItem from="1719389626090" duration="10667000" />
+      <workItem from="1719401096033" duration="299000" />
+      <workItem from="1719401412201" duration="179000" />
+      <workItem from="1719437561025" duration="7779000" />
+      <workItem from="1719475861532" duration="4749000" />
+      <workItem from="1719486123895" duration="1376000" />
+      <workItem from="1719528437821" duration="4000000" />
+      <workItem from="1719532485077" duration="3631000" />
+      <workItem from="1719536177090" duration="211000" />
+      <workItem from="1719536431722" duration="221000" />
+      <workItem from="1719536767491" duration="5800000" />
+      <workItem from="1719564493316" duration="2216000" />
     </task>
     <task id="LOCAL-00001" summary="Basic fajlovi">
       <option name="closed" value="true" />

@@ -15,28 +15,10 @@ session_start();
     <title>Document</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="index.php">Navbar</a>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <?php if ($_SESSION['username'] == 'admin'){
-                        echo "<a class='nav-link active' aria-current='page' href='item.php'>Dodaj artikal</a>";
-                    }?>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="user.php?id=<?php echo $_SESSION['id']; ?>"><?php echo $_SESSION['username']?></a>
-                </li>
-            </ul>
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" id="search" name="search" onkeyup="find()">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-        </div>
-    </div>
-</nav>
-
+<?php
+include 'navbar.php';
+?>
+<form>
     <span>Model</span>
     <input type="text" id="model" >
     <br>
@@ -58,10 +40,12 @@ session_start();
         }
         ?>
     </select>
-    <input type="submit" value="Add" id="submit" onclick="addItem()">
 
+    <input type="submit" value="Add" id="submit" onclick="addItem()">
+</form>
 
 <script src="../Frontend/app.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
 </body>
 </html>

@@ -1,7 +1,10 @@
 <?php
 session_start();
 include 'connection.php';
-$url = "user.php?id=". $_SESSION['id'];
+if (!isset($_SESSION['username'])) {
+    header('location: login.php');
+}
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -15,33 +18,10 @@ $url = "user.php?id=". $_SESSION['id'];
     <title>Document</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="index.php">Navbar</a>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <?php if ($_SESSION['username'] == 'admin'){
-                        echo "<a class='nav-link active' aria-current='page' href='item.php'>Dodaj artikal</a>";
-                    }?>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?php echo$url ?>"><?php echo $_SESSION['username']?></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="cart.php">Cart</a>
-                </li>
-            </ul>
+<?php
+include 'navbar.php';
+?>
 
-                <input class="form-control me-2" id="search" name="search" onkeyup="find()">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-
-        </div>
-    </div>
-</nav>
-<ul id="lista">
-
-</ul>
 
 <div onchange="choose()">
     <select id="category" >
@@ -67,7 +47,7 @@ $url = "user.php?id=". $_SESSION['id'];
 
 <div id="table"></div>
 <script src="../Frontend/app.js"></script>
-<script src="../Frontend/add.js"></script>
+<script src="../Frontend/validate.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </body>
 </html>
